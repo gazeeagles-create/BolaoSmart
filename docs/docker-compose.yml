@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # Serviço do banco de dados
+  db:
+    image: postgres:13
+    container_name: bolaosmart-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bolaosmart
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - bolaosmart-net
+
+  # Serviço do backend
+  backend:
+    build:
+      context: ./backend
+    container_name: bolaosmart-backend
+    environment:
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    networks:
+      - bolaosmart-net
+
+  # Serviço do frontend
+  frontend:
+    build:
+      context: ./frontend
+    container_name: bolaosmart-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - bolaosmart-net
+
+# Volumes para persistência de dados do banco
+volumes:
+  db-data:
+
+# Redes
+networks:
+  bolaosmart-net:
+    driver: bridge
