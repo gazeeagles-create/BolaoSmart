@@ -1,7 +1,7 @@
 {
   "name": "bolaosmart",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": ".",  # Aqui, indicamos a raiz como base para o React Router
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
