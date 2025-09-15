@@ -1,0 +1,20 @@
+{
+  "name": "BolaoSmart",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "supabase-js": "^2.0.0",
+    "loveable": "^0.3.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8"
+  }
+}
