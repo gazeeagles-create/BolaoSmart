@@ -6,8 +6,8 @@ services:
     image: postgres:13
     container_name: bolaosmart-db
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: Eagles Gaze
+      POSTGRES_PASSWORD: cr3kc6k94TorVzCH
       POSTGRES_DB: bolaosmart
     ports:
       - "5432:5432"
@@ -22,8 +22,8 @@ services:
       context: ./backend
     container_name: bolaosmart-backend
     environment:
-      SUPABASE_URL: ${SUPABASE_URL}
-      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
+      SUPABASE_URL: rwngziyldsirpxzadqgy
+      SUPABASE_SERVICE_ROLE_KEY: ${eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3bmd6aXlsZHNpcnB4emFkcWd5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1Nzk1MTkwOSwiZXhwIjoyMDczNTI3OTA5fQ.299kB5LnmobnniWUOYhtB-_EZGq9BMusfg2Bqc80BGI}
     ports:
       - "4000:4000"
     depends_on:
