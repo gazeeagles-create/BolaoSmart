@@ -14,5 +14,3 @@ Este documento explica como configurar as integrações necessárias para rodar 
 No arquivo **`.env`** do **backend**, adicione as seguintes variáveis de ambiente:
 
 ```bash
-SUPABASE_URL=https://rwngziyldsirpxzadqgy.supabase.co
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3bmd6aXlsZHNpcnB4emFkcWd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5NTE5MDksImV4cCI6MjA3MzUyNzkwOX0.hlpzYlbB2zhT3xDidOiYZ1wJLoQXUaKWCGGNplf4gy8
